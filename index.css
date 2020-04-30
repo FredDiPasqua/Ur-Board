@@ -1,0 +1,113 @@
+#header {
+  background: black;
+  color: #ffffff;
+}
+#header h3 {
+  font-family: georgia;
+  margin: 2px 0 2px 15px;
+  background: rgba(200, 200, 200, 0.1);
+  padding: 5px;
+  display: inline-block;
+}
+#header a {
+  background: gray;
+  color: white;
+  text-decoration: none;
+  opacity: 60%;
+  float: right;
+  width: 60px;
+  text-align: center;
+  position: relative;
+  top: 11px;
+}
+#header a:hover {
+  opacity: 100%;
+}
+
+#mainSpace {
+  padding: 0;
+}
+
+#canvas {
+  width: 100%;
+  height: 82.62vh;
+  border: 1px solid black;
+}
+
+#btndrop {
+  background: black;
+  opacity: 80%;
+}
+
+.botoncolores {
+  width: 48px;
+  height: 48px;
+}
+
+#dropupColores {
+  width: auto;
+  height: auto;
+}
+
+#color1 {
+  background: black;
+}
+
+#color2 {
+  background: red;
+}
+
+#color3 {
+  background: blue;
+}
+
+#color4 {
+  background: blueviolet;
+}
+
+#color5 {
+  background: goldenrod;
+}
+
+#color6 {
+  background: green;
+}
+
+#color7 {
+  background: brown;
+}
+
+#color8 {
+  background: palevioletred;
+}
+
+#color9 {
+  background: aqua;
+}
+
+#controlgrosor {
+  display: inline-block;
+  vertical-align: middle;
+}
+#controlgrosor p {
+  display: inline-block;
+  border: 1px solid black;
+  width: 30px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium";
+}
+#controlgrosor button {
+  border-radius: 150px;
+  padding: 0;
+  position: relative;
+  top: 5px;
+  opacity: 70%;
+}
+#controlgrosor button i {
+  font-size: 30px;
+}
+#controlgrosor button:hover {
+  opacity: 90%;
+}
+
+/*# sourceMappingURL=index.css.map */
