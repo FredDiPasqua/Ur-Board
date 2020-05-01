@@ -62,9 +62,14 @@ document.getElementById("paintbtn")
 
 var desactivar = (evento3) => {click = false};
 
-cuadro.addEventListener("mousedown", activar);
-cuadro.addEventListener("mouseup", desactivar);
-cuadro.addEventListener("mousemove", pintar);
+// cuadro.addEventListener("mousedown", activar);
+// cuadro.addEventListener("mouseup", desactivar);
+// cuadro.addEventListener("mousemove", pintar);
+
+cuadro.addEventListener("touchstart", activar);
+cuadro.addEventListener("touchend", desactivar);
+cuadro.addEventListener("touchmove", pintar);
+
 
 function dibujarLinea(color, xi, yi, xf, yf, lienzo) {
     lienzo.beginPath();
