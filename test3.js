@@ -56,7 +56,7 @@ document.getElementById("clearbtn").addEventListener("click", clearAll);
 /* final CLEAR */
 
 /* CONTROL ERASE */
-var eraser = () => { color = "white" }
+var eraser = () => { color = cuadro.style.background, wid=20, widDisplay.textContent = wid}
 document.getElementById("erasebtn").addEventListener("click", eraser);
 /* final ERASE */
 
@@ -69,9 +69,26 @@ document.getElementById("savebtn").addEventListener("click", saveI, false);
 /* final GUARDAR */
 
 /* CONTROL COLOR BACKGROUND */
+var BgBtn = document.getElementById("bgbtn");
+var changeBg1 = () => { cuadro.style.background = "white", BgBtn.style.background = "white"};
+var changeBg2 = () => { cuadro.style.background = "yellowgreen", BgBtn.style.background = "yellowgreen"};
+var changeBg3 = () => { cuadro.style.background = "violet", BgBtn.style.background = "violet"};
+var changeBg4 = () => { cuadro.style.background = "tan", BgBtn.style.background = "tan"};
+var changeBg5 = () => { cuadro.style.background = "slategray", BgBtn.style.background = "slategray"};
+var changeBg6 = () => { cuadro.style.background = "salmon", BgBtn.style.background = "salmon"};
+var changeBg7 = () => { cuadro.style.background = "powderblue", BgBtn.style.background = "powderblue"};
+var changeBg8 = () => { cuadro.style.background = "rgb(255, 207, 119)", BgBtn.style.background = "rgb(255, 207, 119)"};
+var changeBg9 = () => { cuadro.style.background = "mediumaquamarine", BgBtn.style.background = "mediumaquamarine"};
 
-// problemas de touchscreen y el resize aun no queda...
-
+document.getElementById("colorbg1").addEventListener("click", changeBg1);
+document.getElementById("colorbg2").addEventListener("click", changeBg2);
+document.getElementById("colorbg3").addEventListener("click", changeBg3);
+document.getElementById("colorbg4").addEventListener("click", changeBg4);
+document.getElementById("colorbg5").addEventListener("click", changeBg5);
+document.getElementById("colorbg6").addEventListener("click", changeBg6);
+document.getElementById("colorbg7").addEventListener("click", changeBg7);
+document.getElementById("colorbg8").addEventListener("click", changeBg8);
+document.getElementById("colorbg9").addEventListener("click", changeBg9);
 /* final COLOR BACKGROUND */
 
 var desactivar = (evento3) => {click = false};

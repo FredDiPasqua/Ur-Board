@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="container-fluid">
+    <div id="page" class="container-fluid">
         <div class="row">
             <div id="header" class="col">
                 <h3>Ur Board</h3>
@@ -23,8 +23,7 @@
             </div>
         </div>
         <div id="barraDeControles" class="row">
-            <div class="col">
-                <!-- <button id="paintbtn" ><i class="fas fa-pencil-alt"></i></button> -->
+            <div id="barraDeC" class="col">
                 <div class="btn-group dropup">
                     <button type="button" id="btndrop" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i></button>
                     <div id ="dropupColores" class="dropdown-menu container-fluid">
@@ -60,7 +59,38 @@
                     <p id="grosorDisplay">1</p>
                     <button id="moregrosorbtn" ><i class="fas fa-arrow-circle-up"></i></button>
                 </div>
-                <button>Background</button>
+
+                <div id="botonDeColoresBg" class="btn-group dropup">
+                    <button id="bgbtn" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Background
+                    </button>
+                    <div id="coloresbg" class="dropdown-menu container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <button id="colorbg1" class="botoncolores"></button>
+                                <button id="colorbg2" class="botoncolores"></button>
+                                <button id="colorbg3" class="botoncolores"></button>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button id="colorbg4" class="botoncolores"></button>
+                                <button id="colorbg5" class="botoncolores"></button>
+                                <button id="colorbg6" class="botoncolores"></button>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button id="colorbg7" class="botoncolores"></button>
+                                <button id="colorbg8" class="botoncolores"></button>
+                                <button id="colorbg9" class="botoncolores"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <button id="clearbtn" >Clear</button>
 
 
