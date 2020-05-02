@@ -4,11 +4,16 @@ var xi, yi, xf, yf, click;
 var color = "black";
 
 /* Responsive del canvas */
-var s = getComputedStyle(cuadro);
-var w = s.width;
-var h = s.height;
-cuadro.width = w.split("px")[0];
-cuadro.heigth = h.split("px")[0];
+function resizing () {
+    var s = getComputedStyle(cuadro);
+    var w = s.width;
+    var h = s.height;
+    cuadro.width = w.split("px")[0];
+    cuadro.heigth = h.split("px")[0];
+}
+window.addEventListener("resize", resizing);
+window.addEventListener("load", resizing);
+/* final responsive */
 
 
 /* CONTROL DE COLORES */
@@ -57,12 +62,17 @@ document.getElementById("erasebtn").addEventListener("click", eraser);
 
 /* CONTROL GUARDAR */
 function saveI () {
-    var cuadro = document.getElementById("canvas");
     var imagen = cuadro.toDataURL("image/png");
     this.href = imagen;
 }
 document.getElementById("savebtn").addEventListener("click", saveI, false);
 /* final GUARDAR */
+
+/* CONTROL COLOR BACKGROUND */
+
+// problemas de touchscreen y el resize aun no queda...
+
+/* final COLOR BACKGROUND */
 
 var desactivar = (evento3) => {click = false};
 
