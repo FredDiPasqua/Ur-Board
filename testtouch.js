@@ -60,7 +60,10 @@ document.getElementById("paintbtn")
 
 /*  final PENCIL */
 
-var desactivar = (evento3) => {click = false};
+var desactivar = (evento3) => {
+    click = false
+    console.log(evento1.touches, evento1.type);
+};
 
 // cuadro.addEventListener("mousedown", activar);
 // cuadro.addEventListener("mouseup", desactivar);
@@ -82,6 +85,7 @@ function dibujarLinea(color, xi, yi, xf, yf, lienzo) {
 }
 
 function activar(evento1) {
+    console.log(evento1.touches, evento1.type);
     click = true;
     xi = evento1.clientX;
     yi = evento1.clientY;
@@ -89,6 +93,7 @@ function activar(evento1) {
 
 function pintar(evento2) {
     if (click) {
+        console.log(evento1.touches, evento1.type);
         xf = evento2.clientX;
         yf = evento2.clientY;
         dibujarLinea(color, xi, yi, xf, yf, hoja)
