@@ -55,23 +55,16 @@ var eraser = () => { color = "white" }
 document.getElementById("erasebtn").addEventListener("click", eraser);
 /* final ERASE */
 
-/* CONTROL PENCIL */
-document.getElementById("paintbtn")
 
-/*  final PENCIL */
+var desactivar = (evento3) => {click = false};
 
-var desactivar = (evento3) => {
-    click = false
-    console.log(evento1.touches, evento1.type);
-};
+cuadro.addEventListener("mousedown", activar);
+cuadro.addEventListener("mouseup", desactivar);
+cuadro.addEventListener("mousemove", pintar);
 
-// cuadro.addEventListener("mousedown", activar);
-// cuadro.addEventListener("mouseup", desactivar);
-// cuadro.addEventListener("mousemove", pintar);
-
-cuadro.addEventListener("touchstart", activar);
-cuadro.addEventListener("touchend", desactivar);
-cuadro.addEventListener("touchmove", pintar);
+// cuadro.addEventListener("touchstart", activar);
+// cuadro.addEventListener("touchend", desactivar);
+// cuadro.addEventListener("touchmove", pintar);
 
 
 function dibujarLinea(color, xi, yi, xf, yf, lienzo) {
@@ -85,19 +78,15 @@ function dibujarLinea(color, xi, yi, xf, yf, lienzo) {
 }
 
 function activar(evento1) {
-    evento1.preventDefault();
-    console.log(evento1.touches, evento1.type);
     click = true;
-    xi = evento1.clientX;
-    yi = evento1.clientY;
+    xi = evento1.layerX;
+    yi = evento1.layerY;
 }
 
 function pintar(evento2) {
     if (click) {
-        evento1.preventDefault();
-        console.log(evento1.touches, evento1.type);
-        xf = evento2.clientX;
-        yf = evento2.clientY;
+        xf = evento2.layerX;
+        yf = evento2.layerY;
         dibujarLinea(color, xi, yi, xf, yf, hoja)
         xi = xf;
         yi = yf;

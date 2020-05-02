@@ -55,10 +55,14 @@ var eraser = () => { color = "white" }
 document.getElementById("erasebtn").addEventListener("click", eraser);
 /* final ERASE */
 
-/* CONTROL PENCIL */
-document.getElementById("paintbtn")
-
-/*  final PENCIL */
+/* CONTROL GUARDAR */
+function saveI () {
+    var cuadro = document.getElementById("canvas");
+    var imagen = cuadro.toDataURL("image/png");
+    this.href = imagen;
+}
+document.getElementById("savebtn").addEventListener("click", saveI, false);
+/* final GUARDAR */
 
 var desactivar = (evento3) => {click = false};
 
